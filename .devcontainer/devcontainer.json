@@ -7,13 +7,10 @@
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
-    },
-    "ghcr.io/devcontainers/features/postgresql:1": {
-      "version": "15"
     }
   },
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y postgresql postgresql-contrib && echo 'Ambiente pronto!'",
   "forwardPorts": [8000, 5432, 5173],
-  "postCreateCommand": "echo 'Ambiente pronto!'",
   "customizations": {
     "vscode": {
       "extensions": [
